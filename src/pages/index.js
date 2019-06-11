@@ -9,17 +9,25 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Step selected="1"/>
-    <form>
+    <form name="contact" netlify>
       <h1>Nos conte sobre você!</h1>
-      <p class="decorated-heading__description">
+      <p>
         Queremos te conhecer para podermos te atender melhor! E não se preocupe, todas as suas informações estão seguras ;)
       </p>
 
-      <div class="col-medium-12 vertical-offset5">
-        <div class="form-group">
-          <label class="form-group__label">Nome</label>
-          <input class="form-group__text-field" type="text" placeholder="Insira o nome aqui" />
-        </div>
+      <p>
+        <label> Nome:
+              <input type="text" name="name" placeholder="Insira o nome aqui" />
+        </label>
+      </p>
+      <p>
+        <label> Email:
+              <input type="email" name="email" placeholder="Insira seu email aqui" />
+        </label>
+      </p>
+
+      <div>
+        <button type="submit">Enviar</button>
       </div>
     </form>
 
