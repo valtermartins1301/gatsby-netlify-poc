@@ -5,16 +5,15 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Step from "../components/step"
 
-const SecondPage = () => (
+const FourthPage = () => (
   <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <Step selected="2"/>
+    <SEO title="Page four" />
+    <Step selected="4"/>
 
-    <p>Welcome to page 2</p>
+    <h1>Hi from the Fourth page</h1>
+    <p>Welcome to page 4</p>
     <Link to="/">Go back to the homepage</Link>
-    <Link to="/page-3/">Go to page 3</Link>
   </Layout>
 )
 
-export default SecondPage
+export default FourthPage

@@ -1,42 +1,56 @@
-import { Link } from "gatsby"
+import { Link as LinkRaw } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import {css} from '@emotion/core'
+import styled from '@emotion/styled'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+// Text
+const baseText = css`
+  margin: 0 auto;
+`
+const Text = styled.h1`
+  ${baseText}
+`
+
+// Link
+const baseLink = css`
+  text-decoration: none;
+  color: white;
+`
+const Link = styled(LinkRaw)`
+  ${baseLink}
+`
+
+// HEADER
+const baseHeader = css`
+  margin-bottom: 1.45rem;
+  height: 2.75em;
+  text-align: center;
+  background-image: linear-gradient(48deg,#44a19e,#34d089);
+`
+
+const Header = styled.header`
+  ${baseHeader}
+`
+
+
+// ---------------------------------
+const HeaderRaw = ({ siteTitle }) => (
+  <Header>
+    <Text>
+      <Link to="/">
+        {siteTitle}
+      </Link>
+    </Text>
+  </Header>
 )
 
-Header.propTypes = {
+HeaderRaw.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+HeaderRaw.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default HeaderRaw
