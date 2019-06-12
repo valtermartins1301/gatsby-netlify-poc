@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby`,
-    description: `Gatsby and Netlify`,
-    author: `@gatsbyjs`,
+    title: `Debitas`,
+    description: `Debitas test`,
+    author: `valter.martins@creditas.com.br`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,11 +19,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Debitas-form`,
+        short_name: `Gatsby`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#44a19e`,
+        theme_color: `#44a19e`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
