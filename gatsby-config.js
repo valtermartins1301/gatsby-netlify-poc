@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Debitas`,
-    description: `Debitas test`,
+    title: `Creditas 2`,
+    description: `Creditas test`,
     author: `valter.martins@creditas.com.br`,
   },
   plugins: [
