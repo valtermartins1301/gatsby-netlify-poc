@@ -1,16 +1,34 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
-import "./layout.css"
+import Font from "../fonts/lucida-grande.woff" 
+import styled from '@emotion/styled'
+import Step from "../components/step"
+
+const Main = styled.main`
+@font-face {
+  font-family: 'Lucida Grande';
+  src: url('${Font}') format("woff");
+}
+
+margin: 0;
+height: 100vh;
+font-family: 'Lucida Grande';
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 16px;
+background-image: linear-gradient(
+  to bottom, 
+  #fff 0%, 
+  #fff 50%, 
+  #37b 50%, 
+  #37b 100%
+);
+background-size: cover;
+background-repeat: no-repeat;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,19 +43,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}
-          </footer>
+        <Header siteTitle={data.site.siteMetadata.title}/>
+        <Step selected="1"/>
+        <div>
+          <Main>{children}</Main>
         </div>
       </>
     )}

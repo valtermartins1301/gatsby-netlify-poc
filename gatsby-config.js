@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Creditas 2`,
-    description: `Creditas test`,
+    title: `Creditas`,
+    description: `Creditas lead form`,
     author: `valter.martins@creditas.com.br`,
   },
   plugins: [
@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Debitas-form`,
+        name: `creditas-form`,
         short_name: `Gatsby`,
         start_url: `/`,
         background_color: `#44a19e`,

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import {css} from '@emotion/core'
 import styled from '@emotion/styled'
+import CreditasLogo from '../images/creditas-logo.png'
 
 // Text
 const baseText = css`
@@ -15,7 +16,7 @@ const Text = styled.h1`
 // Link
 const baseLink = css`
   text-decoration: none;
-  color: white;
+  color: black;
 `
 const Link = styled(LinkRaw)`
   ${baseLink}
@@ -25,8 +26,10 @@ const Link = styled(LinkRaw)`
 const baseHeader = css`
   margin-bottom: 1.45rem;
   height: 2.75em;
-  text-align: center;
-  background-image: linear-gradient(48deg,#44a19e,#34d089);
+
+  img {
+    height: 0.8em;
+  }
 `
 
 const Header = styled.header`
@@ -39,7 +42,7 @@ const HeaderRaw = ({ siteTitle }) => (
   <Header>
     <Text>
       <Link to="/">
-        {siteTitle}
+        <img src={CreditasLogo} alt="Creditas Logo"/>
       </Link>
     </Text>
   </Header>
