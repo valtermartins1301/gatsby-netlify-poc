@@ -8,7 +8,7 @@ import Step from "../components/step"
 
 const Main = styled.main`
 @font-face {
-  font-family: 'Lucida Grande';
+  font-family: 'Lucida Grande',san-serif;
   src: url('${Font}') format("woff");
 }
 

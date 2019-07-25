@@ -55,7 +55,7 @@ const ListItem = styled.li`
 // --------------------------
 const Step = ({ selected }) => (
   <Nav>
-    <img src={userIcon} label="User icon"/>
+    <img src={userIcon} alt="User icon"/>
     <OrderedList>
       {STEPS.map((step, index) => {
         const active = selected === step;
@@ -63,7 +63,7 @@ const Step = ({ selected }) => (
         return <ListItem key={index} active={active}/>
       })}
     </OrderedList>
-    <img src={flagIcon} label="Flag icom"/>
+    <img src={flagIcon} alt="Flag icom"/>
   </Nav>
 )
 
