@@ -5,6 +5,7 @@ module.exports = {
     author: `valter.martins@creditas.com.br`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
