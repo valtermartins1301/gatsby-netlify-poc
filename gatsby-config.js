@@ -29,6 +29,14 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-plugin-sentry',
+      options: {
+        dsn: "https://e85045be77544e9484bb45cc342d5e67@sentry.io/1513877",
+        environment: process.env.NODE_ENV,
+        enabled: true
+      }
+    },
     `gatsby-plugin-offline`,
   ],
 }
